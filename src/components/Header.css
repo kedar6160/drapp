@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
