@@ -21,24 +21,45 @@
   
   .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px;
     background-color: #f9f9f9;
   }
   
   .doctor-profile {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   
   .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  
-  .hero h1 {
-    font-size: 32px;
+
+  .bg-custom{
+    background: rgb(226,226,254);
+    background: -moz-linear-gradient(180deg, rgb(231 231 231), rgb(250 250 250)100%);
+    background: -webkit-linear-gradient(180deg, rgb(231 231 231), rgb(250 250 250)100%);
+    background: linear-gradient(180deg, rgb(231 231 231), rgb(250 250 250)100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2fe",endColorstr="#dadae3",GradientType=1);
+    }
+
+  .hero h1, .hero h2 , .hero h3 , .hero h4 , .hero h5 , .hero h6 {
+    margin: 5px;
   }
-  
+  .hero p{
+    margin: 5px;
+    font-size: 14px;
+  }
+  .profile-description {
+    font-size: 14px;
+    text-align: start;
+  }
   .btn {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -59,7 +80,6 @@
   
   .footer {
     text-align: center;
-    padding: 15px;
     background-color: #333;
     color: white;
   }

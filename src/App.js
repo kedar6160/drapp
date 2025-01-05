@@ -44,24 +44,26 @@ export default function App() {
       reason: "Back Pain Consultation",
     },
   ];
-  
+
   const [bookings, setBookings] = useState(initialBookings);
 
   const addBooking = (newBooking) => {
     setBookings((prevBookings) => [...prevBookings, newBooking]);
   };
   return (
-    <Router>
-      <Routes>
-        <Route path="/"element={<Home bookings={bookings} />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/book-appointment" element={<BookingForm />} />
-        <Route path="/history" element={<HistoryPage bookings={bookings} />} />
+    <>
       
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home bookings={bookings} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/book-appointment" element={<BookingForm />} />
+          <Route path="/history" element={<HistoryPage bookings={bookings} />} />
+        </Routes>
+      </Router>
+     
+    </>
   );
 }
 
-// https://dribbble.com/shots/22719193-Care-Medical-Mobile-App

@@ -3,21 +3,22 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import TreatmentCard from '../components/TreatmentCard';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 const treatments = [
   {
-    image: 'cardiology.jpg',
+    image: '/images/cardiology.jpg',
     title: 'Cardiology',
     description: 'Comprehensive care for heart conditions.',
   },
   {
-    image: 'diabetes.jpg',
+    image: '/images/diabetes.jpg',
     title: 'Diabetes Management',
     description: 'Personalized plans for diabetes control.',
   },
   {
-    image: 'general.jpg',
+    image: '/images/general.jpg',
     title: 'General Health',
     description: 'Routine check-ups and overall wellness.',
   },
@@ -28,18 +29,16 @@ const Home = ({ bookings }) => {
 
   return (
     <div className="home-container">
-      {/* Header */}
       <Header />
-
       {/* Hero Section */}
       <section className="hero">
-        <div className="doctor-profile">
-          <img src="doctor-profile.jpg" alt="Dr. John Doe" className="profile-pic" />
-          <h1>Dr. John Doe</h1>
-          <p>Specialist in Cardiology</p>
-          <p>15+ years of experience in treating heart conditions.</p>
+        <div className="doctor-profile bg-custom">
+          <img src="/images/dr.png" alt="Dr. John Doe" className="profile-pic" />
+          <div className='profile-description'>
+            <h3>Dr. John Doe</h3>
+            <h4>Specialist in Cardiology</h4>
+            <p>15+ years of experience in treating heart conditions.</p></div>
         </div>
-        <Link to="/book-appointment" className="appointment-button">Book an Appointment</Link>
       </section>
       <section>
         <div className="home-container">
@@ -55,7 +54,7 @@ const Home = ({ bookings }) => {
             ))}
           </div>
           <div style={{ marginTop: '20px' }}>
-          <Link to="/book-appointment" className="appointment-button">Book an Appointment</Link>
+            <Link to="/book-appointment" className="appointment-button">Book an Appointment</Link>
           </div>
         </div>
       </section>
@@ -73,10 +72,10 @@ const Home = ({ bookings }) => {
             ))}
           </ul>
 
-        <Link to="/history" className="see-more-button">
-          See More
-        </Link>
-      </div>
+          <Link to="/history" className="see-more-button">
+            See More
+          </Link>
+        </div>
       </section>
 
       {/* Clinic Details */}
@@ -88,9 +87,7 @@ const Home = ({ bookings }) => {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <p>&copy; 2024 Dr. John Doe Clinic. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
